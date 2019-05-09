@@ -40,9 +40,9 @@ const createDeck = () => {
     }
   }
   document.querySelector('.output').textContent = '' // clear out old card
-  shownDeck = []
 }
 const shuffle = () => {
+  shownDeck = []
   for (let i = 52; i > 1; i--) {
     // select a random card we have not hit yet
     const randomLocation = Math.floor(Math.random() * i)
