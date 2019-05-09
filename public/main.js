@@ -16,7 +16,6 @@ let face = [
 ]
 let cardDeck = []
 let shownDeck = []
-let dealCard = 0
 
 // push card to html
 
@@ -39,28 +38,25 @@ const createDeck = () => {
       cardDeck.push(newCard)
       console.log('card pushed to deck')
     }
-    shownDeck = []
   }
-  document.querySelector('.output').textContent = ''
+  document.querySelector('.output').textContent = '' // clear out old card
+  shownDeck = []
 }
 const shuffle = () => {
   for (let i = 52; i > 1; i--) {
     // select a random card we have not hit yet
     const randomLocation = Math.floor(Math.random() * i)
+    // swap the current card with the random card
     const lastCard = cardDeck[i] // define variables for shuffle
     cardDeck[i] = cardDeck[randomLocation]
-    cardDeck[randomLocation] = lastCard // swap the current card with the random card
+    cardDeck[randomLocation] = lastCard
     console.log(lastCard)
     shownDeck.push(lastCard)
   }
 }
-dealCard = () => {
-  const firstCard = shownDeck[0]
-  console.log(firstCard)
-  const makeSpace = document.createElement('li').appendChild(firstCard)
-  console.log(makeSpace)
-  // makeSpace.textContent = firstCard
-  // document.querySelector('.output').appendChild(firstCard)
+const dealCard = () => {
+  document.querySelector('.output').textContent = shownDeck[0]
+  console.log('does this do anything?' + shownDeck[0])
 }
 
 document.addEventListener('DOMContentLoaded', main)
