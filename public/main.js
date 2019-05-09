@@ -53,16 +53,15 @@ const shuffle = () => {
     shownDeck.push(lastCard)
   }
 }
-dealCard = document.querySelector('.output').appendChild()
-//   for (let i = 0; i > shownDeck.length; i++) {
-//     const firstCard = shownDeck[i]
-//     console.log(firstCard)
-//     const makeSpace = document.createElement('p')
-//     makeSpace.textContent = firstCard
-//     console.log(makeSpace)
-//     document.querySelector('.output').appendChild('p')
-//   }
-// }
+dealCard = () => {
+  const firstCard = shownDeck[0]
+  console.log(firstCard)
+  const makeSpace = document.createElement('li')
+  makeSpace.textContent = firstCard
+  console.log(makeSpace)
+  document.querySelector('.output').appendChild(firstCard)
+}
+
 document.addEventListener('DOMContentLoaded', main)
 document.querySelector('.shuffle').addEventListener('click', createDeck)
 document.querySelector('.shuffle').addEventListener('click', shuffle)
