@@ -11,7 +11,13 @@ body {
   min-height: 100%;
 }
 
-.deck {
+.shuffle {
+  background-color: red;
+  font-weight: bolder;
+  padding: 1rem;
+}
+
+.deal {
   background-color: red;
   font-weight: bolder;
   padding: 1rem;
