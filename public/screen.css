@@ -4,6 +4,7 @@
 
 html {
   height: 100%;
+  background: whitesmoke;
 }
 
 body {
@@ -11,14 +12,30 @@ body {
   min-height: 100%;
 }
 
+.centered-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .shuffle {
   background-color: red;
   font-weight: bolder;
-  padding: 1rem;
+  padding: 0.5rem;
+  margin: 0.25rem;
 }
 
 .deal {
   background-color: red;
   font-weight: bolder;
-  padding: 1rem;
+  padding: 0.5rem;
+  margin: 0.25rem;
+}
+
+.be-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
