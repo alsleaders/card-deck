@@ -39,6 +39,7 @@ const createDeck = () => {
       cardDeck.push(newCard)
       console.log('card pushed to deck')
     }
+    shownDeck = []
   }
   document.querySelector('.output').textContent = ''
 }
@@ -56,10 +57,10 @@ const shuffle = () => {
 dealCard = () => {
   const firstCard = shownDeck[0]
   console.log(firstCard)
-  const makeSpace = document.createElement('li')
-  makeSpace.textContent = firstCard
+  const makeSpace = document.createElement('li').appendChild(firstCard)
   console.log(makeSpace)
-  document.querySelector('.output').appendChild(firstCard)
+  // makeSpace.textContent = firstCard
+  // document.querySelector('.output').appendChild(firstCard)
 }
 
 document.addEventListener('DOMContentLoaded', main)
